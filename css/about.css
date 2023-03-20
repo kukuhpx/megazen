@@ -1,0 +1,122 @@
+.profile{
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+.profile img{
+    margin: 0 0px;
+    width: 144px;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+.profile .img1{
+    display: inline;
+}
+.img1 img{
+    margin: 0 25px;
+}
+.award h2{
+    text-align: center;
+    margin: 10px;
+}
+.award h3{
+    margin-right: 30px;
+}
+.award img{
+    width: 144px;
+    height: auto;
+    float: left;
+    margin-right:  20px;
+    margin-top: 20px;
+    border: 3px solid black;
+}
+
+    .award li{
+        line-height: 20px;
+        list-style-type:circle ;
+        margin-right: -10px;
+        
+    }
+    .box1,.box2,.box3,.box4{
+float: left;
+    }
+    .award{
+        width: 100%;
+        padding: 20px 50px;
+        box-sizing: border-box;
+    }
+    .profile h2{
+        margin: 20px;
+        text-align: center;
+    }
+    .clear{
+        clear:left;
+    }
+.cover{
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/bgg.avif);
+    background-size: cover;
+    background-position: 0 -300px;
+    filter: grayscale(1.3);
+    color: blue;
+    clear: both;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.cover p {
+        color: #fff;
+        z-index: 1;
+        padding: 25px 220px;
+        font-size: 50px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .articel{
+        text-align: left;
+        justify-content: left;
+        line-height: 25px;
+        margin:20px;
+    }
+    .id{
+        text-align: left;
+        float: left;
+        margin:0;
+        padding: 0;
+    }
+    .profile{
+        height: 10px;
+        width: 100%;
+    }
+.cover+h2{
+text-align: center;
+}
+
+    .tips li {
+        font-size: large;
+    }
+    .tips iframe{
+        margin: 20px 200px;
+        width: 720px;
+    }
+    .tips a{
+        color: blue;
+        text-decoration: underline;
+    }
+    footer{
+      margin: 0 -150px;
+    }
+    .award ul li{
+        color: black;
+    list-style-type:circle ;
+    display: block;
+    line-height: 20px;
+    }
+    i{
+        margin-right: 15px;
+    }

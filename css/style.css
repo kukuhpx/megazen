@@ -1,0 +1,296 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Oswald:wght@500&display=swap');
+::selection {background: transparent;}
+a {text-decoration: none;}
+h1, h2, h3, h4, h5, h6, p {font-family: 'Manrope', sans-serif;}
+h2 {font-weight: 800;}
+body {background:#dcdada}
+img {
+    width: 100%;
+    height: auto;
+}
+header {
+    width: 100%;
+    line-height: 45px;
+    box-sizing: border-box;
+    background: #545050;
+}
+.clr {clear: both;}
+/* Nav for Mobile */
+@media screen and (max-width: 1100px) {
+    header {padding: 0}
+    .logo {padding-left: 20px;}
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 45px;
+        background: #6d6b6b;
+        z-index: 10;
+    }
+    nav nav {
+        display: none;
+        position: static;
+        padding-left: 20px;
+    }
+    .toggle-btn{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0;
+        width: 45px;
+        line-height: 41.8px;
+        color: #f3eded;
+        font-size: 24px;
+        cursor: pointer;
+        background: #545050;
+    }
+}
+@media screen and (min-width: 1101px) {
+    header {padding: 0 12.5%;}
+    nav {
+        display: flex;
+        justify-content: end;
+        position: relative;
+        width: fit-content;
+    }
+    nav nav {
+        display: none;
+        position: absolute;
+        top: 45px;
+        right: 140px;
+        background: #6d6b6b;
+        z-index: 10;
+    }
+    .toggle-btn {display: none;}
+}
+/* Mobile breakpoint */
+@media screen and (max-width: 719px) {
+    .col p {margin-bottom: 10px;}
+    .col button {width: 100%;}
+}
+@media screen and (min-width: 480px) and (max-width: 576px) {
+    .col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* Tablet breakpoint */
+@media screen and (min-width: 576px) {.col {margin: 0.5%;}}
+@media screen and (min-width: 576px) and (max-width: 719px) {
+    .col {width: 48.7%;}
+}
+/* Laptop breakpoint */
+@media screen and (min-width: 720px) {
+    .col p {
+        float: left;
+        width: 50%;
+        line-height: 20px;
+        font-size: 14px;
+    }
+    .col button {
+        float: right;
+        width: 48%;
+    }
+}
+@media screen and (min-width: 720px) and (max-width: 991px) {
+    .col {width: 32.3%;}
+}
+/* Desktop breakpoint */
+@media screen and (min-width: 992px) { 
+    .col {width: 23.75%;}
+}
+/* Navigation */
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+nav a {
+    font-family: 'Oswald', sans-serif;
+    padding: 0 10px;
+    color: #b6b1b1;
+}
+nav a:hover {
+    color: #f5f5f5;
+    background-color: #52e2d4;
+    transition: all 0.5s;
+}
+nav nav a {
+    display: block;
+    color: #b6b1b1;
+}
+.drop-nav:hover {cursor: pointer;}
+.show-nav {
+    display: flex;
+    flex-direction: column;
+}
+.active-nav {
+    color: #f5f5f5;
+    background-color: #52e2d4;
+}
+/* Carousel */
+.carousel {
+    clear: both;
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+.slide {
+    display: flex;
+    width: 600%;
+    max-height: 500px;
+    overflow: hidden;
+}
+.slide input {display: none;}
+.st {
+    width: 19.5%;
+    transition: 2s;
+}
+.st img{
+    width: 100%;
+    height: auto;
+    transform: translateX(-50px);
+}
+.nav-auto{
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+.nav-auto div{
+    border: 2px solid #23e3c2;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.nav-auto div:not(:last-child){
+    margin-right: 30px;
+    justify-content: center;
+}
+.nav-m {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
+}
+.m-btn{
+    border: 2px solid #23e3c2;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.m-btn:not(:last-child){margin-right: 30px;}
+.m-btn:hover{background: #23e3c2;}
+#radio1:checked ~ .nav-auto .a-b1,
+#radio2:checked ~ .nav-auto .a-b2,
+#radio3:checked ~ .nav-auto .a-b3,
+#radio4:checked ~ .nav-auto .a-b4 {background: #23e3c2;} 
+#radio1:checked ~ .first{margin-left: 0;}
+#radio2:checked ~ .first{margin-left: -20%;}
+#radio3:checked ~ .first{margin-left: -40%;}
+#radio4:checked ~ .first{margin-left: -60%;}
+.deadline {
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 2px solid black; 
+}
+.deadline p {
+    font-size: 36px;
+    font-weight: 600;
+    font-style: italic;
+    color: #ff0000;
+    text-align: center;
+    animation: animate 1.5s linear infinite
+}
+@keyframes animate{
+    0% {opacity: 0;}
+    50% {opacity: 0.7;}
+    100%{opacity: 0;}
+}
+/* Flash sale section */
+.container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #d3d1d1;
+    overflow: hidden;
+}
+.container h2 {text-align: center;}
+.col {
+    float: left;
+    box-sizing: border-box;
+    min-height: 220px;
+    padding: 20px;
+    background: #ffffff;
+}
+.prd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100px;
+    max-height: 350px;
+    overflow: hidden;
+}
+.prd img:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+}
+.col h4 {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0;
+    font-size: 18px;
+}
+.box-star {
+    display: block;
+    line-height: 20px;
+}
+.col button {
+    min-height: 40px;
+    font-size: 12PX;
+    font-weight: bold;
+    border: none;
+    border-radius: 18px;
+    background: #23e3c2;
+}
+.col button:hover {
+    background: #7de5d4;
+    transition: all 0.5s;
+}
+.brand {
+    background: #ffffff;
+    text-align: center;
+}
+.brand h2 {padding: 10px 0;}
+.brand img {
+    margin: 0 10px;
+    width: auto;
+    height: 72px;
+}
+footer {
+    padding: 20px 0;
+    text-align: center;
+    background: #545050;
+}
+footer a {
+    margin: 0 10px;
+    font-size: 24px;
+    color:#ffffff
+}
+footer p, footer p a {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #f5f5f5;
+}
